@@ -1,10 +1,10 @@
 # Named Entity Recognition
 
-## Aim
+## Aim:
 
 To develop an LSTM-based model for recognizing the named entities in the text.
 
-## Problem Statement and Dataset
+## Problem Statement and Dataset:
 * We aim to develop an LSTM-based neural network model using Bidirectional Recurrent Neural Networks for recognizing the named entities in the text.
 * The dataset used has a number of sentences, and each words have their tags.
 * We have to vectorize these words using Embedding techniques to train our model.
@@ -30,14 +30,13 @@ To develop an LSTM-based model for recognizing the named entities in the text.
 
 ### Libraries:
 ```python
-i = 20
-p = model.predict(np.array([X_test[i]]))
-p = np.argmax(p, axis=-1)
-y_true = y_test[i]
-print("{:15}{:5}\t {}\n".format("Word", "True", "Pred"))
-print("-" *30)
-for w, true, pred in zip(X_test[i], y_true, p[0]):
-    print("{:15}{}\t{}".format(words[w-1], tags[true], tags[pred]))
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+from tensorflow.keras.preprocessing import sequence
+from sklearn.model_selection import train_test_split
+from keras import layers
+from keras.models import Model
 ```
 ### Reading, Pre-processing Data:
 ```python
@@ -157,7 +156,7 @@ for w, true, pred in zip(X_test[i], y_true, p[0]):
 
 <img width="500" alt="image" src="https://github.com/Monisha-11/named-entity-recognition/assets/93427240/ea0ad463-3826-45b3-a2e5-0095ad537fd1">
 
-### Sample Text PredictionL
+### Sample Text Prediction:
 
 <img width="399" alt="image" src="https://github.com/Monisha-11/named-entity-recognition/assets/93427240/c004f118-5622-480c-b7cc-f6c0c8d37aa1">
 
