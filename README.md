@@ -26,7 +26,7 @@ To develop an LSTM-based model for recognizing the named entities in the text.
 
 7. We compile the model to fit the train sets and validation sets.
 
-## program
+## Program:
 
 ### Libraries:
 ```python
